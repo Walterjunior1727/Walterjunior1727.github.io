@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="style_empecemos.css">
+    <title>Portafolio Empresarial | SKY Inmobiliaria</title>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="ASSETS/SKY Inmobiliaria_transparent.png" alt="Logo Inmobiliaria">
+            </a> 
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="empecemos.html">Inicio</a></li>
+            <li class="link"><a href="empecemos.html#products-section">Productos</a></li>
+            <li id="link1" class="link"><a href="empecemos.html#features-section">Servicios</a></li>
+            <li id="link4" class="link"><a href="testimonios.html">Testimonios</a></li>
+            <li id="link5" class="link"><a href="#contact-section">Contacto</a></li>
+            <li id="link6" class="link"><a href="informacion.html">Informacion</a></li>
+        </ul>
+        <button class="btn">Iniciar Sesión</button>
+    </nav>
+
+    <section id="testimonials-section" class="container testimonials-section">
+        <h2 class="header">Testimonios</h2>
+        <div class="testimonials">
+            <button class="prev"><i class="ri-arrow-left-s-line"></i></button>
+            <div class="testimonial">
+                <div class="profile">
+                    <img src="/Portafolio/ASSETS/WhatsApp Image 2024-10-12 at 8.51.24 PM.jpeg" alt="Perfil Cliente">
+                </div>
+                <div class="text">
+                    <p>Experto en infraestructura: “La inversión en infraestructura no solo es una necesidad para la expansión de la economía, sino que también es esencial para atraer más inversiones extranjeras al país, especialmente en sectores como el inmobiliario”</p>
+                    <h4>- Ingeniero Carlos Gómez, especialista en infraestructura.</h4>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="profile">
+                    <img src="ASSETS/persona-1.jpeg" alt="Perfil Cliente">
+                </div>
+                <div class="text">
+                    <p>"SKY Inmobiliaria es excepcional. Su trabajo ha sido clave para el éxito de nuestros proyectos inmobiliarios. Gracias a ellos, hemos podido completar nuestras urbanizaciones a tiempo y con excelente calidad. ¡Altamente recomendados!"</p>
+                    <h4>- Carlos Martínez, Desarrollador Inmobiliario</h4>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="profile">
+                    <img src="ASSETS/persona-2.jpeg" alt="Perfil Usuario">
+                </div>
+                <div class="text">
+                    <p>"Los tutoriales y el soporte que ofrece SKY Inmobiliaria son invaluables. Gracias a su guía, he aprendido mucho y he mejorado la calidad de mis ventas de lotes. Su conocimiento del mercado es insuperable."</p>
+                    <h4>- Ana Gómez, Agente de Ventas</h4>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="profile">
+                    <img src="ASSETS/persona-3.jpeg" alt="Perfil Socio">
+                </div>
+                <div class="text">
+                    <p>"El trabajo colaborativo con SKY Inmobiliaria ha sido una experiencia fantástica. En nuestro proyecto conjunto de desarrollo de terrenos, siempre están dispuestos a ayudar y aportar soluciones innovadoras, asegurando el éxito del proyecto."</p>
+                    <h4>- Javier Rodríguez, Socio en Desarrollo de Terrenos</h4>
+                </div>
+            </div>
+            <button class="next"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+        <div class="focus-group-video">
+            <h3>Focus Group con Clientes</h3>
+            <p>Observa cómo nuestros clientes discuten sus experiencias con SKY Inmobiliaria durante nuestro último focus group.</p>
+                <a class="video" href="https://drive.google.com/file/d/1MNklqbSC3vZk8ILMmRfYk6d1Hbnjp0xl/view?usp=drivesdk">Dar click aqui</a>
+
+        </div>
+    </section>
+    <script>
+
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentTestimonial = 0; 
+    
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.style.display = 'block'; 
+                } else {
+                    testimonial.style.display = 'none';  
+                }
+            });
+        }
+    
+
+        showTestimonial(currentTestimonial);
+    
+
+        prevBtn.addEventListener('click', () => {
+            currentTestimonial--;
+            if (currentTestimonial < 0) {
+                currentTestimonial = testimonials.length - 1;
+            }
+            showTestimonial(currentTestimonial);
+        });
+    
+
+        nextBtn.addEventListener('click', () => {
+            currentTestimonial++;
+            if (currentTestimonial >= testimonials.length) {
+                currentTestimonial = 0; 
+            }
+            showTestimonial(currentTestimonial);
+        });
+    </script>
+
+
+    <footer class="container" id="contact-section"">
+        <div class="column">
+            <div class="logo">
+                <img src="ASSETS/SKY Inmobiliaria_transparent.png" alt="Logo Inmobiliaria">
+            </div>
+            <p>Nosotros estamos para ti en lo que necesites.</p>
+            <div class="socials">
+                <h4>Síguenos:</h4>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-youtube-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+            </div>
+        </div>
+        <div class="column">
+            <h4>Empresas Asociadas</h4>
+            <a href="#">Inmobiliaria Trujillo Norte</a>
+            <a href="#">Constructora Andina</a>
+            <a href="#">Desarrollos Urbanos Trujillo</a>
+        </div>
+        <div class="column">
+            <h4>Más Proyectos</h4>
+            <a href="#">Lotes</a>
+            <a href="#">Departamentos</a>
+            <a href="#">Índice m²</a>
+        </div>
+        <div class="column">
+            <h4>Contáctanos</h4>
+            <a href="#">Llámanos</a>
+            <a href="#">Políticas de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+    </footer>
+    <div class="copyright">
+        Copyright &copy; 2024. Todos los derechos reservados.
+    </div>
+
+
+</body>
+
+
+
+
+
